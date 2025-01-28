@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+.tab-2 {
+  display: flex;
+  overflow: scroll;
+  overflow-x:hidden;
+  flex-wrap: wrap;
+  gap: 0 10px;
+  height: 70vh;
+  width: 70%;
+  margin: 50px auto;
+}
+
+.img {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
+.skill{
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
+.mk {
+  border-radius: 50%;
+  width: 124px;
+  height: 124px;
+  display: block;
+  margin: 0 auto;
+}
+
+.name {
+  text-align: center;
+}
+
+.tab-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+}
+.center-text{
+  text-align: center;
+  font-size: 12px;
+}
+
+.stab-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color:black;
+}
+
+.hobby-a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: gray;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.hobby-a:hover {
+  opacity: 0.8;
+}
+
+.tab-2 > label {
+  flex: 1 1;
+  order: -1;
+  opacity: 0.5;
+  min-width: 70px;
+  padding: 0.6em 1em;
+  border-radius: 5px 5px 0 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 0.9em;
+  width: 100%; /* 幅を均一に保つ */
+  box-sizing: border-box;
+  text-align: center; 
+}
+
+.tab-2 > label:hover {
+  opacity: 0.8;
+}
+
+.tab-2 input {
+  display: none;
+}
+
+.tab-2 > section {
+  display: none;
+  width: 100%;
+  padding: 1.5em 1em;
+  background-color: #FBFBFB;
+}
+
+.tab-2 label:has(:checked) {
+  opacity: 1;
+}
+
+.tab-2 label:has(:checked) + section {
+  display: block;
+}
+
+/* スライド */
+
+.slide {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-auto-flow: row;
+  margin: 0 auto;
+}
+
+.slide img {
+  display: block;
+  text-align: center;
+}
+
+.slide-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.menu-container {
+  display: grid;
+  grid-template: repeat(1, 1fr) / repeat(2, 1fr); /* 1行、2列 */
+  gap: 10px; /* セル間に余白 */
+}
+
+.menu-container button {
+  all: unset;
+  width: 124px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.thumbnail {
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.active {
+  opacity: 1;
+}

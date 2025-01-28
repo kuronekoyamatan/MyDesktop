@@ -1,0 +1,130 @@
+/* 設定 */
+@charset "utf-8";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.menu #open {
+  cursor: pointer;
+}
+
+.menu #open:hover {
+  transform: scale(1.1);
+}
+
+/* 各アイコン */
+.menu img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  transition: transform 0.5s ease;
+}
+
+figure a img:hover {
+  transform: scale(1.1);
+}
+
+/* オーバーレイ  */
+.overlay {
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 画面の中央に表示 */
+  height: 220px;
+  width: 250px;
+  text-align: center;
+  pointer-events: none;
+  transition: opacity 0.6s;
+  border-radius: 5%;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+  /* margin-top: 10%; */
+  padding: 0;
+}
+
+.overlay li {
+  font-size: 24px;
+  margin-top: 16px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.3s, transform 1s;
+}
+
+/* JSによって追加されたクラス */
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.overlay.show li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.overlay.show li:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.overlay.show li:nth-child(6) {
+  transition-delay: 0.6s;
+}
+
+.setting-title{
+  margin: 10px;
+}
+
+.setting{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.s-text{
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.setting:hover {
+  transform: scale(1.1);
+}
+
+/*↓ メディアクエリ: スマホ対応 ↓*/
+@media (max-width: 768px) {
+  .div1 {
+    display: none;
+  }
+}

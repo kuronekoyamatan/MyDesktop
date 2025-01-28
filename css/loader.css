@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.typing-animation {
+  width: 15ch; /*文字の長さ*/
+  border-right: 5px solid #ffffff; /*点滅バー*/
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 700;
+  animation: typing 2s steps(15), blink 0.4s step-end infinite alternate; /*アニメーション*/
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent; /*点滅風に見せる*/
+  }
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading__contents {
+  text-align: center;
+}

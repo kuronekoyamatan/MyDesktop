@@ -1,0 +1,407 @@
+@charset "utf-8";
+
+/* htmlとbodyの余白をリセット */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  font-family: 'Kaisei HarunoUmi', serif;
+}
+
+/* ↓ グリッドレイアウト ↓ */
+.parent {
+  height: 95vh;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 5px;
+  background-position: center;
+  background-size: cover;
+}
+
+/* ヘッダー */
+.div1 {
+  grid-column: span 10 / span 10;
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+/* 左側 */
+.div2 {
+  grid-row: span 11 / span 11;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+/* フィッター ツールバー */
+.div3 {
+  grid-column: span 12 / span 12;
+  grid-column-start: 1;
+  grid-row-start: 12;
+}
+
+/* 右側 */
+.div4 {
+  grid-row: span 11 / span 11;
+  grid-column-start: 12;
+  grid-row-start: 1;
+}
+
+.div8 {
+  grid-column: span 2 / span 2;
+  grid-row: span 10 / span 10;
+  grid-column-start: 10;
+  grid-row-start: 2;
+}
+
+.div9 {
+  grid-column: span 4 / span 4;
+  grid-row: span 5 / span 5;
+  grid-column-start: 6;
+  grid-row-start: 2;
+}
+
+.div10 {
+  grid-column: span 4 / span 4;
+  grid-row: span 5 / span 5;
+  grid-column-start: 6;
+  grid-row-start: 7;
+}
+
+/* アイコン ファイル置き場 */
+.div13 {
+  grid-column: span 4 / span 4;
+  grid-row: span 10 / span 10;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+/*↑ グリッドレイアウト ↑*/
+
+/* div13 アイコンをまとめるコンテナ */
+.icon-container {
+  display: grid;
+  grid-template-columns: repeat(2, 160px);
+  gap: 20px;
+  justify-content: center;
+}
+
+/* アイコンのタイトル */
+.icon-title {
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px #000;
+}
+
+/* アイコン画像サイズ */
+button.modal-trigger img,
+figure a img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.5s ease;
+}
+
+button.modal-trigger img:hover,
+figure a img:hover {
+  transform: scale(1.1);
+}
+
+article {
+  text-align: center;
+}
+
+/* スマホ用 */
+#m-game {
+  display: none;
+}
+
+/* モーダルウィンドウ */
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 画面の中央に表示 */
+  height: 95vh;
+  width: 50%;
+  display: none; /* 初期状態で非表示 */
+  z-index: 5000; /* 最前面 */
+}
+#modal-5 {
+  height: 95vh;
+  width: 70%;
+}
+
+/* 各モーダルの背景 */
+#modal-1,
+#modal-2 {
+  background-color: rgb(255, 255, 255);
+}
+
+#modal-3,
+#modal-4{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#modal-5 {
+  background-color: #FBFBFB;
+}
+
+.modal-container.active {
+  display: block; /* "active"クラスが追加されると表示 */
+}
+
+/* モーダルの閉じるボタン */
+.modal-close {
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+#words,
+#pass,
+#memo {
+  margin-top: 100px;
+  height: 500px;
+}
+
+/* ツールバー*/
+.toolbar-container {
+  display: grid;
+  grid-template-columns: 300px 2fr 1fr;
+  background-color: #ffffffe0;
+  bottom: 0; /* 下部に配置 */
+  width: 100%;
+  padding: 5px;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center; /* 縦方向の中央揃え */
+  justify-content: center; /* 水平方向の中央揃え */
+}
+
+.toolbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* 時計とカレンダー */
+#clock-calendar {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#clock {
+  font-size: 12px;
+}
+
+#date {
+  font-size: 16px;
+}
+
+/* ツールバーのアイコン */
+.icon-btn {
+  cursor: pointer;
+}
+
+.icon-btn img {
+  padding-top: 5px;
+  width: 50px;
+  transition: transform 0.5s ease;
+}
+
+.icon-btn a img:hover {
+  transform: scale(1.1); /* ホバーで拡大 */
+}
+
+/* 検索窓 */
+#search-input {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 250px;
+  background-color: white;
+  color: black;
+}
+
+#search-input:focus {
+  outline: none;
+  border: 3px solid #4caf50;
+}
+
+#search-input::placeholder {
+  color: #525252;
+}
+
+/* 吹き出し */
+.balloon-parent {
+  position: relative;
+}
+.balloon-parent:hover .balloon {
+  display: inline;
+}
+.balloon {
+  position: absolute; /* 親要素を基準 */
+  display: none;
+  padding: 2px;
+  background-color: rgb(255, 255, 255);
+  width: 100px;
+  left: 30%;
+  bottom: 100%;
+  margin-bottom: 12px;
+  font-size: 80%;
+  text-align: center;
+}
+.balloon:after {
+  border-top: 12px solid rgb(255, 255, 255);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -12px;
+  left: 5%;
+  content: '';
+  position: absolute;
+}
+
+/* ヘッダー吹き出し */
+.balloon-parent:hover .header-balloon {
+  display: inline-block;
+}
+
+.header-balloon {
+  position: absolute; /* 親要素を基準 */
+  display: none;
+  padding: 2px;
+  background-color: rgb(255, 255, 255);
+  width: 80px;
+  left: -20px; /* アイコンの左下に表示 */
+  bottom: -50px; /* アイコンの下に表示 */
+  margin-bottom: 12px;
+  font-size: 80%;
+  text-align: center;
+}
+.header-balloon:after {
+  border-bottom: 12px solid rgb(255, 255, 255);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  top: -12px;
+  left: 20%;
+  content: '';
+  position: absolute;
+}
+
+/*↓ メディアクエリ: スマホ対応 ↓*/
+@media (max-width: 768px) {
+  body {
+    height: auto; /* 画面サイズに合わせて変動 */
+  }
+
+  /*↓ グリッドレイアウト ↓*/
+  .parent {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 5px;
+    padding: 50px;
+  }
+
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div8,
+  .div9,
+  .div10 {
+    display: none;
+  }
+
+  .div13 {
+    grid-column: span 6 / span 6;
+    grid-row: span 6 / span 6;
+    grid-row-start: 2;
+  }
+  /*↑ グリッドレイアウト ↑*/
+
+  .toolbar-container {
+    display: none;
+  }
+
+  /* アイコンのサイズ */
+  button.modal-trigger img,
+  figure a img {
+    width: 150px;
+    height: auto;
+  }
+
+  /* div13のアイコンをまとめるコンテナ */
+  .icon-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+  }
+
+  /* 吹き出し */
+  .balloon-parent {
+    display: none;
+  }
+
+  /* アイコンタイトルの文字 */
+  .icon-title,
+  .toolbar-title {
+    font-size: 24px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 0px #000;
+  }
+
+  /* モーダルウィンドウ */
+  .modal-container {
+    height: 100vh;
+    width: 90%;
+  }
+
+  .modal-close {
+    font-size: 50px;
+    top: 20px;
+    right: 20px;
+  }
+
+  #words,
+  #pass,
+  #memo {
+    margin-top: 100px;
+    height: 500px;
+  }
+
+  #pc-game {
+    display: none;
+  }
+
+  #m-game {
+    display: block;
+  }
+}
+
+/* PC表示時にツールバーアイコンを非表示に */
+@media (min-width: 767px) {
+  .toolbar-icons {
+    display: none;
+  }
+}

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Desktop -Portfolio-</title>
+    <link rel="icon" href="./img/yamatan.png" />
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="./css/ress.css" />
+    <!--↓ フォントCSS ↓-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap"
+      rel="stylesheet"
+    />
+    <!--↑ フォントCSS ↑-->
+    <!--↓ Bootstrap CSS ↓-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/loader.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+    <link rel="stylesheet" href="./css/menu.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- click sound -->
+    <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+  </head>
+
+  <body>
+    <!--↓ グリッドレイアウト ↓-->
+    <div class="parent">
+      <div class="div1">
+        <header>
+          <div></div>
+          <div class="s-menu">
+            <a href=""></a>
+          </div>
+          <div class="menu">
+            <div class="balloon-parent">
+              <img
+                id="open"
+                class="h-open"
+                src="./img/icon8.png"
+                alt="背景変更"
+              />
+              <span class="header-balloon">背景変更</span>
+            </div>
+          </div>
+        </header>
+        <div class="overlay">
+          <i class="bi bi-x-lg h-close" id="close"></i>
+          <nav>
+            <p class="setting-title">背景変更</p>
+            <ul>
+              <li>
+                <a href="#" data-img="img/pc1.jpg">
+                  <img class="setting" src="img/pc1.jpg" />
+                </a>
+              </li>
+              <li>
+                <a href="#" data-img="img/pc2.jpg">
+                  <img
+                    class="setting"
+                    src="img/pc2.jpg"
+                    width="50"
+                    height="50"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#" data-img="img/pc3.jpg">
+                  <img
+                    class="setting"
+                    src="img/pc3.jpg"
+                    width="50"
+                    height="50"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#" data-img="img/pc4.jpg">
+                  <img
+                    class="setting"
+                    src="img/pc4.jpg"
+                    width="50"
+                    height="50"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#" data-img="img/pc5.jpg">
+                  <img
+                    class="setting"
+                    src="img/pc5.jpg"
+                    width="50"
+                    height="50"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#" data-img="img/pc6.jpg">
+                  <img
+                    class="setting"
+                    src="img/pc6.jpg"
+                    width="50"
+                    height="50"
+                  />
+                </a>
+              </li>
+            </ul>
+            <p class="s-text">JavaScript</p>
+          </nav>
+        </div>
+      </div>
+      <div class="div2"></div>
+      <div class="div3">
+        <!-- フィッター ツールバー  -->
+        <div class="toolbar-container">
+          <!-- 左側のエリア（検索窓） -->
+          <div class="toolbar-left">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+            &nbsp;
+            <input
+              type="text"
+              id="search-input"
+              placeholder="ITエンジニア モノづくり 求人 "
+            />
+          </div>
+          <!-- 中央のエリア（アイコン） -->
+          <div class="toolbar-center">
+            <div class="balloon-parent icon-btn" id="home-btn1">
+              <!-- クリックイベントでモーダルを開く -->
+              <button
+                class="modal-trigger"
+                data-modal="modal-5"
+                aria-label="自己紹介"
+              >
+                <img src="./img/icon4.png" alt="自己紹介" />
+              </button>
+              <span class="balloon">自己紹介</span>
+            </div>
+
+            <div class="balloon-parent icon-btn" id="home-btn2">
+              <a href="#"><img src="./img/icon6.png" alt="お問い合わせ" /></a>
+              <span class="balloon">お問い合わせ</span>
+            </div>
+
+            <div class="balloon-parent icon-btn" id="home-btn4">
+              <a href="https://github.com/kuronekoyamatan"
+                ><img src="./img/icon7.png" alt="github"
+              /></a>
+              <span class="balloon">GitHub</span>
+            </div>
+          </div>
+
+          <!-- 右側のエリア（clock calendar） -->
+          <div id="clock-calendar">
+            <div>
+              <time id="date"></time><br />
+              <time id="clock"></time>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="div4"></div>
+      <div class="div8"></div>
+      <div class="div9"></div>
+      <div class="div10"></div>
+      <div class="div13 icon-container">
+        <!-- ツールバー -->
+
+        <article class="toolbar-icons">
+          <figure>
+            <!-- クリックイベントでモーダルを開く -->
+            <button
+              class="modal-trigger"
+              data-modal="modal-5"
+              aria-label="自己紹介"
+            >
+              <img src="./img/icon4.png" alt="自己紹介" />
+            </button>
+          </figure>
+        </article>
+
+        <article class="toolbar-icons">
+          <figure>
+            <a href="#"><img src="./img/icon6.png" alt="お問い合わせ" /></a>
+            <figcaption class="toolbar-title">お問い合わせ</figcaption>
+          </figure>
+        </article>
+
+        <article class="toolbar-icons">
+          <figure>
+            <a href="#"><img src="./img/icon3.png" alt="" /></a>
+            <figcaption class="toolbar-title"></figcaption>
+          </figure>
+        </article>
+
+        <!-- モーダル -->
+        <article class="modal-open">
+          <figure>
+            <!-- クリックイベントでモーダルを開く -->
+            <button
+              class="modal-trigger"
+              data-modal="modal-1"
+              aria-label="自分だけのメモアプリ"
+            >
+              <img src="./img/icon1.png" alt="自分だけのメモアプリ" />
+            </button>
+            <figcaption class="icon-title">メモ帳.js</figcaption>
+          </figure>
+        </article>
+        <article class="modal-open">
+          <figure>
+            <button
+              class="modal-trigger"
+              data-modal="modal-2"
+              aria-label="貴方に贈るメッセージアプリ"
+            >
+              <img src="./img/icon1.png" alt="貴方に贈るメッセージアプリ" />
+            </button>
+            <figcaption class="icon-title">
+              貴方に贈る<br />メッセージ.js
+            </figcaption>
+          </figure>
+        </article>
+        <article class="modal-open">
+          <figure>
+            <button
+              class="modal-trigger"
+              data-modal="modal-3"
+              aria-label="パスワード自動生成機"
+            >
+              <img src="./img/icon1.png" alt="パスワード自動生成機" />
+            </button>
+            <figcaption class="icon-title">
+              パスワード<br />自動生成機.js
+            </figcaption>
+          </figure>
+        </article>
+        <article class="modal-open">
+          <figure>
+            <button class="modal-trigger" data-modal="modal-4" aria-label="">
+              <img src="./img/icon1.png" alt="" />
+            </button>
+            <figcaption class="icon-title">後日</figcaption>
+          </figure>
+        </article>
+
+        <!-- リンク-->
+        <article class="icon-link">
+          <figure>
+            <a href="https://www.appsheet.com/portfolio/970827340">
+              <img src="./img/icon5.png" alt="お金の管理アプリ" />
+            </a>
+            <figcaption class="icon-title">お金マスター.AppSheet</figcaption>
+          </figure>
+        </article>
+
+        <article class="icon-link" id="pc-game">
+          <figure>
+            <a href="https://kuronekoyamatan.github.io/HumanRocket/">
+              <img src="./img/icon2.png" alt="ミニゲーム" />
+            </a>
+            <figcaption class="icon-title">
+              HumanRocket<br />ミニゲーム.py
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="icon-link" id="m-game">
+          <figure>
+            <a href="https://youtu.be/ixV_00WjQfo?si=0Hrx3L1B6Jwlf0aI">
+              <img src="./img/icon2.png" alt="ミニゲーム動画" />
+            </a>
+            <figcaption class="icon-title">
+              ブラウザ<br />ミニゲーム.mov
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </div>
+    <!--↑ グリッドレイアウト ↑-->
+
+    <!-- モーダルコンテナ -->
+    <div class="modal-container" id="modal-1">
+      <div class="modal-body">
+        <!-- ブートストラップアイコン -->
+        <div class="modal-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            fill="currentColor"
+            class="bi bi-x-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+            />
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+            />
+          </svg>
+        </div>
+        <div class="modal-content">
+          <p>
+            <!-- モーダル内 -->
+            <iframe
+              id="memo"
+              src="https://kuronekoyamatan.github.io/memo/"
+              frameborder="0"
+              width="100%"
+            ></iframe>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container" id="modal-2">
+      <div class="modal-body">
+        <!-- ブートストラップアイコン -->
+        <div class="modal-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            fill="currentColor"
+            class="bi bi-x-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+            />
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+            />
+          </svg>
+        </div>
+        <div class="modal-content">
+          <p>
+            <!-- モーダル内 -->
+            <iframe
+              id="words"
+              src="https://kuronekoyamatan.github.io/words/"
+              frameborder="0"
+              width="100%"
+            ></iframe>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container" id="modal-3">
+      <div class="modal-body">
+        <!-- ブートストラップアイコン -->
+        <div class="modal-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            fill="white"
+            class="bi bi-x-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+            />
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+            />
+          </svg>
+        </div>
+        <div class="modal-content">
+          <p>
+            <!-- モーダル内 -->
+            <iframe
+              id="pass"
+              src="https://kuronekoyamatan.github.io/RandomPassword/"
+              frameborder="0"
+              width="100%"
+            ></iframe>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container" id="modal-4">
+      <div class="modal-body">
+        <!-- ブートストラップアイコン -->
+        <div class="modal-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            fill="white"
+            class="bi bi-x-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+            />
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+            />
+          </svg>
+        </div>
+        <div class="modal-content">
+          <p>
+            <!-- モーダル内 -->
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 自己紹介モーダル中身 -->
+    <div class="modal-container" id="modal-5">
+      <div class="modal-body">
+        <div class="modal-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            fill="currentColor"
+            class="bi bi-x-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+            />
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+            />
+          </svg>
+        </div>
+        <div class="modal-content">
+          <div class="tab-2">
+            <label>
+              <input type="radio" name="tab-2" checked />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-person-square"
+                viewBox="0 0 16 16"
+              >
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                <path
+                  d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"
+                />
+              </svg>
+            </label>
+            <section>
+              <div class="icon">
+                <img class="mk" src="./img/icon4.png" alt="アイコン" />
+                <br />
+                <div class="name">MK</div>
+              </div>
+              <br />
+              <p class="tab-text">
+                モノづくりが好きな二児の母です。アイデアを形にすることにやりがいを感じ、デザインや絵を描く事、そしてプログラミングを通じて自分の世界を広げることが目標です。<br />
+                目の前の一瞬一瞬を全力で取り組み、前向きに挑戦し続ける姿でありたいと思っています。
+              </p>
+              <img class="img" src="./img/neko.gif" />
+              <p class="stab-text">
+                <br />
+                【制作ソフト】<br />
+                ・Adobe Premiere Elements<br />
+                ・Adobe Photoshop Elements<br />
+                ・CLIP STUDIO PAINT<br />
+                ・Moho
+              </p>
+            </section>
+            <label>
+              <input type="radio" name="tab-2" />
+              Hobby
+            </label>
+            <section>
+              <p class="tab-text">
+                趣味は絵をかくこと、ハンドメイド、海外ドラマを観ることです。
+              </p>
+              <br />
+              <p class="center-text">趣味で制作した作品について</p>
+              <div class="slide">
+                <img src="./img/h1.jpg" alt="" id="main-image" />
+                <br />
+                <div class="slide-container">
+                  <img
+                    src="./img/h1.jpg"
+                    alt=""
+                    width="60"
+                    height="40"
+                    class="thumbnail active"
+                  />
+                  <img
+                    src="./img/h2.jpg"
+                    alt=""
+                    width="60"
+                    height="40"
+                    class="thumbnail"
+                  />
+                  <img
+                    src="./img/h3.jpg"
+                    alt=""
+                    width="60"
+                    height="40"
+                    class="thumbnail"
+                  />
+                  <img
+                    src="./img/h4.jpg"
+                    alt=""
+                    width="60"
+                    height="40"
+                    class="thumbnail active"
+                  />
+                  <img
+                    src="./img/h5.jpg"
+                    alt=""
+                    width="60"
+                    height="40"
+                    class="thumbnail"
+                  />
+                  <img
+                    src="./img/h6.jpg"
+                    alt=""
+                    width="60"
+                    height="40"
+                    class="thumbnail"
+                  />
+                </div>
+              </div>
+              <br />
+              <p class="tab-text">
+                物語を考え、オリジナルのイラストを描き、ノベルゲーム風にアニメーション化しました。才能ある声優の方々と共に、作品を形にすることができました。また、プログラミングにも初挑戦し、長編ノベルゲームや2Dミニゲームを制作しました。<br /><br />
+                ノベルゲームは2000人以上にダウンロードされ、<a
+                  class="hobby-a"
+                  href="http://nagisanet.blog.fc2.com/blog-entry-1356.html"
+                  >レビュー</a
+                >を頂いたり、<a
+                  class="hobby-a"
+                  href="https://youtube.com/playlist?list=PL2P0XYiv_6Uc-r-xryv_ZIxMCQNWmY5wR&si=_UmFzecVK6CJjmyx"
+                  >YouTubeで実況プレイ</a
+                >されるなど、多くの反響をいただきました。<br />
+                現在は活動をお休みしていますが、もしご興味があれば、以下のURLからご覧いただけます。<br><br /><a
+                  class="hobby-a"
+                  href="https://fori.io/yamatan"
+                  >https://fori.io/yamatan</a
+                >
+              </p>
+            </section>
+            <label>
+              <input type="radio" name="tab-2" />
+              Skill
+            </label>
+            <section>
+              <br />
+              <p class="center-text">2025年2月現在</p>
+              <img class="skill" src="./img/skill202502.jpg" alt="skill" />
+              <p class="tab-text"><br>
+                所有資格<br />
+                ・Java SE 11 Programmer I<br />
+                ・実用英語技能検定準2級<br />
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--↓ loading画面 ↓ -->
+    <div id="loading" class="loading">
+      <div class="loading__contents">
+        <p class="typing-animation">" My Portfolio "</p>
+      </div>
+    </div>
+    <!-- ↑↑loading画面↑↑ -->
+
+    <script src="./js/main.js"></script>
+    <script src="./js/loader.js"></script>
+    <script src="./js/profile.js"></script>
+  </body>
+</html>
