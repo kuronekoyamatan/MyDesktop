@@ -3,7 +3,7 @@
 .tab-2 {
   display: flex;
   overflow: scroll;
-  overflow-x:hidden;
+  overflow-x: hidden;
   flex-wrap: wrap;
   gap: 0 10px;
   height: 70vh;
@@ -17,7 +17,7 @@
   margin: 0 auto;
 }
 
-.skill{
+.skill {
   width: 60%;
   display: block;
   margin: 0 auto;
@@ -40,7 +40,7 @@
   line-height: 1.5;
   color: black;
 }
-.center-text{
+.center-text {
   text-align: center;
   font-size: 12px;
 }
@@ -48,10 +48,10 @@
 .stab-text {
   font-size: 12px;
   line-height: 1.5;
-  color:black;
+  color: black;
 }
 
-.hobby-a{
+.hobby-a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   background-color: gray;
@@ -75,7 +75,7 @@
   font-size: 0.9em;
   width: 100%; /* 幅を均一に保つ */
   box-sizing: border-box;
-  text-align: center; 
+  text-align: center;
 }
 
 .tab-2 > label:hover {
@@ -90,7 +90,7 @@
   display: none;
   width: 100%;
   padding: 1.5em 1em;
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
 }
 
 .tab-2 label:has(:checked) {
@@ -146,4 +146,11 @@
 
 .active {
   opacity: 1;
+}
+
+/*↓ メディアクエリ: スマホ対応 ↓*/
+@media (max-width: 768px) {
+  #main-image {
+    width: 300px;
+  }
 }

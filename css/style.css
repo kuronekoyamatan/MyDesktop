@@ -148,12 +148,12 @@ article {
 }
 
 #modal-3,
-#modal-4{
+#modal-4 {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
 #modal-5 {
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
 }
 
 .modal-container.active {

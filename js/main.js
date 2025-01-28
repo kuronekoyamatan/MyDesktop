@@ -85,35 +85,37 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   // ↑ヘッダー部分↑
 
-  // ↓背景変更のJS↓
-  function bk(img) {
+ // ↓背景変更↓
+function bk(img) {
+  document.querySelector('.parent').style.backgroundImage =
+    'url(' + img + ')';
+
+  // 選ばれた背景画像のURLをローカルストレージに保存
+  localStorage.setItem('backgroundImage', img);
+}
+
+// ページ読み込み時に、保存されている背景を設定
+window.onload = function () {
+  var savedBackground = localStorage.getItem('backgroundImage');
+
+  // 保存された背景があるかどうかを確認
+  if (savedBackground) {
+    // 保存された背景を適用
     document.querySelector('.parent').style.backgroundImage =
-      'url(' + img + ')';
-
-    // 選ばれた背景画像のURLをローカルストレージに保存
-    localStorage.setItem('backgroundImage', img);
+      'url(' + savedBackground + ')';
+  } else {
+    // デフォルトの背景（初期状態）を適用
+    document.querySelector('.parent').style.backgroundImage =
+      'url(/img/pc5.jpg)';
   }
-  // ↑背景変更のJS↑
 
-  // ページ読み込み時に、保存されている背景を設定
-  window.onload = function () {
-    var savedBackground = localStorage.getItem('backgroundImage');
-    if (savedBackground) {
-      // 保存された背景を適用
-      document.querySelector('.parent').style.backgroundImage =
-        'url(' + savedBackground + ')';
-    } else {
-      // デフォルトの背景（初期状態）を適用
-      document.querySelector('.parent').style.backgroundImage =
-        'url(/img/pc5.jpg)';
-    }
-    // 背景画像を変更するイベントリスナーを追加
-    const links = document.querySelectorAll('nav a');
-    links.forEach((link) => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault(); // デフォルトのリンク動作を無効化
-        const img = link.getAttribute('data-img');
-        bk(img);
-      });
+  // 背景画像を変更するイベントリスナーを追加
+  const links = document.querySelectorAll('nav a');
+  links.forEach((link) => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault(); // デフォルトのリンク動作を無効化
+      const img = link.getAttribute('data-img'); // 画像URLを取得
+      bk(img); // bk関数で背景変更
     });
-  };
+  });
+};
