@@ -28,9 +28,7 @@
     <!-- click sound -->
     <audio id="click-sound" src="click.mp3" preload="auto"></audio>
   </head>
-
   <body>
-
     <!--↓ グリッドレイアウト ↓-->
     <div class="parent">
       <div class="div1">
@@ -121,11 +119,16 @@
         <div class="toolbar-container">
           <!-- 左側のエリア（検索窓） -->
           <div class="toolbar-left">
-            <img src="./img/search.png" width="32px" height="32px" alt="検索アイコン">&ensp;
+            <img
+              src="./img/search.png"
+              width="32px"
+              height="32px"
+              alt="検索アイコン"
+            />&ensp;
             <input
               type="text"
               id="search-input"
-              placeholder="ITエンジニア モノづくり 求人 "
+              placeholder="ここで働かせて下さい！"
             />
           </div>
           <!-- 中央のエリア（アイコン） -->
@@ -176,12 +179,12 @@
             <!-- クリックイベントでモーダルを開く -->
             <button
               class="modal-trigger"
-              data-modal=""
+              data-modal="modal-5"
               aria-label="自己紹介"
             >
               <img src="./img/mk.png" alt="自己紹介" />
             </button>
-            <figcaption class="toolbar-title">自己紹介後日</figcaption>
+            <figcaption class="toolbar-title">自己紹介</figcaption>
           </figure>
         </article>
 
@@ -297,7 +300,7 @@
             xmlns="http://www.w3.org/2000/svg"
             width="35"
             height="35"
-            fill="currentColor"
+            fill="white"
             class="bi bi-x-circle"
             viewBox="0 0 16 16"
           >
@@ -331,7 +334,7 @@
             xmlns="http://www.w3.org/2000/svg"
             width="35"
             height="35"
-            fill="currentColor"
+            fill="#0A92B4"
             class="bi bi-x-circle"
             viewBox="0 0 16 16"
           >
@@ -365,7 +368,7 @@
             xmlns="http://www.w3.org/2000/svg"
             width="35"
             height="35"
-            fill="white"
+            fill="#B8E5FF"
             class="bi bi-x-circle"
             viewBox="0 0 16 16"
           >
@@ -470,63 +473,68 @@
               hobby
             </label>
             <section>
-              <p class="tab-text"><br>
+              <p class="tab-text">
+                <br />
                 趣味は絵をかくこと、ハンドメイド、海外ドラマを観ることです。
               </p>
               <br />
               <p class="center-text">趣味で制作した作品について</p>
               <div class="slide">
-                <img class="mainimg" src="./img/h1.jpg" alt="" id="main-image" />
+                <img
+                  class="mainimg"
+                  src="./img/h1.jpg"
+                  alt=""
+                  id="main-image"
+                />
                 <br />
                 <div class="slide-container">
-                  <button><img
-                    src="./img/h1.jpg"
-                    alt="制作画像"
-                    class="thumbnail active"
-                  /></button>
-                  <button><img
-                    src="./img/h2.jpg"
-                    alt="制作画像"
-                    class="thumbnail"
-                  /></button>
-                  <button><img
-                    src="./img/h3.jpg"
-                    alt="制作画像"
-                    class="thumbnail"
-                  /></button>
-                  <button><img
-                    src="./img/h4.jpg"
-                    alt="制作画像"
-                    class="thumbnail"
-                  /></button>
-                  <button><img
-                    src="./img/h5.jpg"
-                    alt="制作画像"
-                    class="thumbnail"
-                  /></button>
-                  <img
-                    src="./img/h6.jpg"
-                    alt="制作画像"
-                    class="thumbnail"
-                  /></button>
+                  <button>
+                    <img
+                      src="./img/h1.jpg"
+                      alt="制作画像"
+                      class="thumbnail active"
+                    />
+                  </button>
+                  <button>
+                    <img src="./img/h2.jpg" alt="制作画像" class="thumbnail" />
+                  </button>
+                  <button>
+                    <img src="./img/h3.jpg" alt="制作画像" class="thumbnail" />
+                  </button>
+                  <button>
+                    <img src="./img/h4.jpg" alt="制作画像" class="thumbnail" />
+                  </button>
+                  <button>
+                    <img src="./img/h5.jpg" alt="制作画像" class="thumbnail" />
+                  </button>
+                  <button>
+                    <img src="./img/h6.jpg" alt="制作画像" class="thumbnail" />
+                  </button>
                 </div>
               </div>
               <br />
               <p class="tab-text">
                 物語を考え、オリジナルのイラストを描き、ノベルゲーム風にアニメーション化しました。才能ある声優の方々と共に、作品を形にすることができました。また、プログラミングにも初挑戦し、長編ノベルゲームや2Dミニゲームを制作しました。<br /><br />
-                ノベルゲームは2000人以上にダウンロードされ、<a
+                ノベルゲームは2000人以上にダウンロードされ、レビューを頂いたり、ツイキャスやYouTubeで実況プレイされるなど、多くの反響をいただきました。
+                現在は活動をお休みしていますが、もしご興味があれば、以下のリンクからご覧いただけます。<br /><br />
+                <a
                   class="hobby-a"
                   href="http://nagisanet.blog.fc2.com/blog-entry-1356.html"
-                  >レビュー</a
-                >を頂いたり、<a
+                  >☑レビュー NaGISA様</a
+                ><br /><br />
+
+                <a class="hobby-a" href="https://furihinablog.com/pensyon/"
+                  >☑レビュー ナタデココ様</a
+                ><br /><br />
+
+                <a
                   class="hobby-a"
                   href="https://youtube.com/playlist?list=PL2P0XYiv_6Uc-r-xryv_ZIxMCQNWmY5wR&si=_UmFzecVK6CJjmyx"
-                  >YouTubeで実況プレイ</a
-                >されるなど、多くの反響をいただきました。<br />
-                現在は活動をお休みしていますが、もしご興味があれば、以下のURLからご覧いただけます。<br /><br /><a
-                  class="hobby-a"
-                  href="https://fori.io/yamatan"
-                  >https://fori.io/yamatan</a
+                  >☑YouTubeで実況プレイ一覧</a
+                >
+                <br /><br />
+                <a class="hobby-a" href="https://fori.io/yamatan"
+                  >☑作品をまとめたもの</a
                 >
               </p>
             </section>
@@ -538,6 +546,7 @@
               <br />
               <p class="center-text">2025年2月現在</p>
               <img class="skill" src="./img/skill202502.jpg" alt="skill" />
+              <img class="s-skill" src="./img/s-skill202502.jpg" alt="skill" />
               <p class="tab-text">
                 <br />
                 所有資格<br />

@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  background-color: hsl(199, 100%, 94%);
+  background-color: #393939;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,28 +131,37 @@ article {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* 画面の中央に表示 */
-  height: 95vh;
-  width: 50%;
+  height: 80vh;
+  width: 40%;
+  border-radius: 3%;
   display: none; /* 初期状態で非表示 */
   z-index: 5000; /* 最前面 */
 }
+
 #modal-5 {
   height: 95vh;
   width: 70%;
 }
 
 /* 各モーダルの背景 */
-#modal-1,
-#modal-2 {
-  background-color: rgb(255, 255, 255);
+#modal-1 {
+  background-color: #aba5ff;
 }
 
-#modal-3,
+#modal-2 {
+  background-color: #33f8c0d8;
+}
+
+#modal-3 {
+  background-color: #819c8b;
+}
+
 #modal-4 {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
 #modal-5 {
+  margin-top: 50px;
   background-color: #ffffff00;
 }
 
@@ -163,24 +172,28 @@ article {
 /* モーダルの閉じるボタン */
 .modal-close {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 16px;
   position: absolute;
-  top: 70px;
-  right: 20%;
+  top: 30px;
+  right: 10%;
 }
 
-#words,
+#words {
+  margin-top: 20px;
+  height: 75vh;
+}
+
 #pass,
 #memo {
-  margin-top: 100px;
-  height: 500px;
+  margin-top: 20px;
+  height: 70vh;
 }
 
 /* ツールバー*/
 .toolbar-container {
   display: grid;
   grid-template-columns: 300px 2fr 1fr;
-  background-color:  hsl(199, 100%, 94%);
+  background-color: hsla(210, 98%, 82%, 0.776);
   bottom: 0; /* 下部に配置 */
   width: 100%;
   padding: 5px;
@@ -262,7 +275,7 @@ article {
   padding: 2px;
   background-color: #e38800eb;
   color: white;
-    border-radius: 5px;
+  border-radius: 5px;
   width: 100px;
   left: 30%;
   bottom: 100%;
@@ -378,7 +391,7 @@ article {
   /* モーダルウィンドウ */
   .modal-container {
     height: 100vh;
-    width: 90%;
+    width: 100%;
   }
 
   .modal-close {
@@ -387,10 +400,22 @@ article {
     right: 20px;
   }
 
+  #modal-5 {
+    width: 100%;
+  }
+
+  #modal-5 .modal-close {
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 100px;
+    right: 20%;
+  }
+
   #words,
   #pass,
   #memo {
-    margin-top: 100px;
+    margin-top: 50px;
     height: 500px;
   }
 
