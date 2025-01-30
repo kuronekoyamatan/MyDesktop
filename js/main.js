@@ -1,5 +1,6 @@
 'use strict';
 
+// ↓モーダル↓
 document.addEventListener('DOMContentLoaded', () => {
   // モーダルを開くボタンを取得
   const modalTriggers = document.querySelectorAll('.modal-trigger');
@@ -22,6 +23,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+// ↑モーダル↑
+
+// ↓スライド↓
+document.addEventListener('DOMContentLoaded', () => {
+  const thumbnails = Array.from(document.querySelectorAll('.thumbnail'));
+  // メインの画像要素を取得
+  const mainImage = document.getElementById('main-image');
+  // アクティブなサムネイルのインデックスを保持する変数
+  let activeIndex = 0;
+  // ギャラリーの表示を更新するための関数
+  function updateGallery(index) {
+    thumbnails.forEach((thumbnail, i) => {
+      thumbnail.classList.toggle('active', i === index);
+    });
+    // メインの画像の src 属性を選択されたサムネイルの src 属性に設定
+    mainImage.src = thumbnails[index].src;
+  }
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+      activeIndex = index;
+      updateGallery(activeIndex);
+    });
+  });
+
+  // 初期表示時にギャラリーを更新
+  updateGallery(activeIndex);
+});
+// ↑スライド↑
 
   // ↓時計と日付の更新↓
   function updateClock() {
@@ -63,13 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
     'a, .modal-close, .modal-open, .h-open, .h-close, .modal-trigger, .tab-2'
   ); // 'a' とクラス名を追加
 
+  // ↓ヘッダー部分↓
   clickableElements.forEach((element) => {
     element.addEventListener('click', function () {
       clickSound.currentTime = 0; // クリック音が途中で停止するのを防ぐ
       clickSound.play(); // クリック音を再生
     });
   });
-  // ↑クリック音↑
 
   // ↓ヘッダー部分↓
   const open = document.querySelector('#open');
@@ -79,6 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.classList.add('show');
     open.classList.add('hide');
   });
+
+  // 初期設定は開いてる状態
+  overlay.classList.add('show');
+  open.classList.add('hide');
+
   close.addEventListener('click', () => {
     overlay.classList.remove('show');
     open.classList.remove('hide');
@@ -106,7 +140,7 @@ window.onload = function () {
   } else {
     // デフォルトの背景（初期状態）を適用
     document.querySelector('.parent').style.backgroundImage =
-      'url(/img/pc5.jpg)';
+      'url(./img/pc5.jpg)';
   }
 
   // 背景画像を変更するイベントリスナーを追加

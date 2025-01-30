@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  background-color: #000000;
+  background-color: hsl(199, 100%, 94%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,8 +99,8 @@ body {
 /* アイコンのタイトル */
 .icon-title {
   font-size: 16px;
-  color: #ffffff;
-  text-shadow: 1px 1px 0px #000;
+  color: #393939;
+  text-shadow: 1px 1px 0px #ffffff;
 }
 
 /* アイコン画像サイズ */
@@ -153,7 +153,7 @@ article {
 }
 
 #modal-5 {
-  background-color: #fbfbfb;
+  background-color: #ffffff00;
 }
 
 .modal-container.active {
@@ -165,8 +165,8 @@ article {
   cursor: pointer;
   font-size: 20px;
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 70px;
+  right: 20%;
 }
 
 #words,
@@ -180,7 +180,7 @@ article {
 .toolbar-container {
   display: grid;
   grid-template-columns: 300px 2fr 1fr;
-  background-color: #ffffffe0;
+  background-color:  hsl(199, 100%, 94%);
   bottom: 0; /* 下部に配置 */
   width: 100%;
   padding: 5px;
@@ -233,16 +233,16 @@ article {
 /* 検索窓 */
 #search-input {
   padding: 5px;
-  border-radius: 4px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   width: 250px;
   background-color: white;
-  color: black;
+  color: #393939;
 }
 
 #search-input:focus {
   outline: none;
-  border: 3px solid #4caf50;
+  border: 2px solid #b0750073;
 }
 
 #search-input::placeholder {
@@ -260,7 +260,9 @@ article {
   position: absolute; /* 親要素を基準 */
   display: none;
   padding: 2px;
-  background-color: rgb(255, 255, 255);
+  background-color: #e38800eb;
+  color: white;
+    border-radius: 5px;
   width: 100px;
   left: 30%;
   bottom: 100%;
@@ -269,7 +271,7 @@ article {
   text-align: center;
 }
 .balloon:after {
-  border-top: 12px solid rgb(255, 255, 255);
+  border-top: 12px solid #e38800eb;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   bottom: -12px;
@@ -287,7 +289,9 @@ article {
   position: absolute; /* 親要素を基準 */
   display: none;
   padding: 2px;
-  background-color: rgb(255, 255, 255);
+  background-color: #e38800eb;
+  color: white;
+  border-radius: 5px;
   width: 80px;
   left: -20px; /* アイコンの左下に表示 */
   bottom: -50px; /* アイコンの下に表示 */
@@ -296,7 +300,7 @@ article {
   text-align: center;
 }
 .header-balloon:after {
-  border-bottom: 12px solid rgb(255, 255, 255);
+  border-bottom: 12px solid #e38800eb;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   top: -12px;
@@ -367,8 +371,8 @@ article {
   .toolbar-title {
     font-size: 24px;
     text-align: center;
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 0px #000;
+    color: #393939;
+    text-shadow: 2px 2px 0px #ffffff;
   }
 
   /* モーダルウィンドウ */

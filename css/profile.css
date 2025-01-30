@@ -8,17 +8,21 @@
   gap: 0 10px;
   height: 70vh;
   width: 70%;
-  margin: 50px auto;
+  margin: 20px auto;
+}
+.tab-2::-webkit-scrollbar {
+    width: 16px;
+}
+.tab-2::-webkit-scrollbar-thumb {
+    background: #b45913af;
+    width: 16px;
+    border-radius: 50px;
 }
 
-.img {
-  width: 60%;
-  display: block;
-  margin: 0 auto;
-}
-
-.skill {
-  width: 60%;
+.img,
+.skill,
+.slide {
+  width: 90%;
   display: block;
   margin: 0 auto;
 }
@@ -37,7 +41,7 @@
 
 .tab-text {
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.8;
   color: black;
 }
 .center-text {
@@ -47,14 +51,14 @@
 
 .stab-text {
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1.8;
   color: black;
 }
 
 .hobby-a {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  background-color: gray;
+  background-color: #e38800eb;
   border-radius: 5px;
   padding: 2px;
 }
@@ -69,11 +73,10 @@
   opacity: 0.5;
   min-width: 70px;
   padding: 0.6em 1em;
-  border-radius: 5px 5px 0 0;
-  background-color: #000000;
+  border-radius: 50px 50px 0 0;
+  background-color: #e38800eb;
   color: #ffffff;
   font-size: 0.9em;
-  width: 100%; /* 幅を均一に保つ */
   box-sizing: border-box;
   text-align: center;
 }
@@ -112,31 +115,17 @@
 }
 
 .slide img {
+  width: 90%;
   display: block;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .slide-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
-}
-
-.menu-container {
-  display: grid;
-  grid-template: repeat(1, 1fr) / repeat(2, 1fr); /* 1行、2列 */
-  gap: 10px; /* セル間に余白 */
-}
-
-.menu-container button {
-  all: unset;
-  width: 124px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-  text-align: center;
-  cursor: pointer;
-  padding: 4px 0;
+  max-width: 500px;
+  margin: auto 0;
 }
 
 .thumbnail {
@@ -149,8 +138,6 @@
 }
 
 /*↓ メディアクエリ: スマホ対応 ↓*/
-@media (max-width: 768px) {
-  #main-image {
-    width: 300px;
-  }
-}
+/* @media (max-width: 768px) {
+  
+} */
