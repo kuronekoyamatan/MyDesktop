@@ -16,10 +16,10 @@ window.addEventListener('DOMContentLoaded', function () {
     // 初回訪問の場合、ローカルストレージにフラグをセット
     localStorage.setItem('firstVisit', 'true');
 
-    // ローディング画面を表示し、3秒後に非表示にする
+    // ローディング画面を表示し、4秒後に非表示にする
     setTimeout(function () {
       hideLoading();
-    }, 3000);
+    }, 4000);
   } else {
     // 初回訪問ではない場合、ローディング画面を非表示にする
     loadingElement.style.display = 'none';
