@@ -97,7 +97,8 @@ body {
 }
 
 /* アイコンのタイトル */
-.icon-title {
+.icon-title,
+.web-title {
   font-size: 16px;
   color: #393939;
   text-shadow: 1px 1px 0px #ffffff;
@@ -320,6 +321,17 @@ article {
   left: 20%;
   content: '';
   position: absolute;
+}
+
+.web img {
+  width: 200px;
+  height: 200px;
+}
+
+.web {
+  position: absolute;
+  bottom: 130px;
+  right: 100px;
 }
 
 /*↓ メディアクエリ: スマホ対応 ↓*/
