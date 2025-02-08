@@ -21,8 +21,7 @@
 
 .img,
 .skill,
-.slide,
-.s-skill {
+.slide {
   width: 90%;
   display: block;
   margin: 0 auto;
@@ -140,6 +139,12 @@
 
 .s-skill {
   display: none;
+}
+
+.design {
+  width: 90vh;
+  display: block;
+  margin: 0 auto;
 }
 
 /*↓ メディアクエリ: スマホ対応 ↓*/
