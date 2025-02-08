@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const clickSound = document.getElementById('click-sound');
   // クリックするたびに音を鳴らしたい要素を選択
   const clickableElements = document.querySelectorAll(
-    'a, .modal-close, .modal-open, .h-open, .h-close, .modal-trigger, .tab-2'
-  ); // 'a' とクラス名を追加
+    'a, .modal-close, .modal-open, .h-open, .h-close, .modal-trigger, .tab-2, .web, .web-s'
+  );
 
   // ↓ヘッダー部分↓
   clickableElements.forEach((element) => {
