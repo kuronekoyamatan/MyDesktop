@@ -81,7 +81,7 @@ window.onload = function () {
   } else {
     // デフォルトの背景（初期状態）を適用
     document.querySelector('.parent').style.backgroundImage =
-      'url(./img/pc5.jpg)';
+      'url(./img/pc2.jpg)';
   }
 
   // 背景画像を変更するイベントリスナーを追加
